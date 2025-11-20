@@ -8,7 +8,7 @@
   --font-5: #{300 u.rem(24)}/#{1} #{u.$font1};
   --font-6: #{400 u.rem(15)}/#{1.65} #{u.$font2};
   --font-7: #{400 u.rem(14)}/#{1} #{u.$font2};
-  --font-7-letterspacing: u.em(5);
+  --font-7-letterspacing: 5px;
 }
 
 h1,
@@ -74,5 +74,20 @@ h2 {
 
   @include u.breakpoint(medium) {
     font: var(--font-2);
+  }
+}
+
+.button__all-products {
+  font: var(--font-7);
+  letter-spacing: var(--font-7-letterspacing);
+  text-transform: uppercase;
+}
+
+.product-listing div p {
+  font: var(--font-5);
+  text-transform: uppercase;
+
+  @include u.breakpoint(large) {
+    font: var(--font-4);
   }
 }
